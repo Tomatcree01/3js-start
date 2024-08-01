@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="module" src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.fillout.com/orgid-81/flowpublicid-undefined/widgetid-custom-favicon/evHeXxeD11dX6MQfirDyMA/favicon-128x128.png?a=f2sHJASEYYCpWriQLf7Z6H">
+    <title>3D Julia Sets Explorer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        #info {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        #info h1 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        #info p {
+            margin: 0;
+            font-size: 14px;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            opacity: 1;
+            transition: opacity 3s;
+        }
+        #controls:not(:hover) {
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        #controls:hover {
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        #controls label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        #controls input[type="range"] {
+            width: 100%;
+            margin-bottom: 15px;
+            background: #4CAF50;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            border-radius: 5px;
+        }
+        #controls input[type="range"]:hover {
+            opacity: 1;
+        }
+        #controls input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        #controls input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h1>3D Julia Sets Explorer</h1>
+        <p>Use mouse to rotate and scroll to zoom</p>
+    </div>
+    <div id="controls">
+        <label for="realPart">Real Part: <span id="realPartValue">0</span></label>
+        <input type="range" id="realPart" min="-1" max="1" step="0.01" value="0">
+        <label for="imagPart">Imaginary Part: <span id="imagPartValue">0</span></label>
+        <input type="range" id="imagPart" min="-1" max="1" step="0.01" value="0">
+        <label for="iterations">Iterations: <span id="iterationsValue">8</span></label>
+        <input type="range" id="iterations" min="1" max="20" step="1" value="8">
+    </div>
+</body>
+</html>
