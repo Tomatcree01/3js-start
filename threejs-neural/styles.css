@@ -1,0 +1,54 @@
+/* CSS Styles */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#info {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    user-select: none;
+}
+
+#info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+#gui-container {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 1;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#gui-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#gui-container input[type="range"] {
+    width: 100%;
+}
+
+#gui-container input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.2);
+    vertical-align: middle;
+}
